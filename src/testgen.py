@@ -5,6 +5,8 @@ def onehot(x):
   return 1 << x
 
 def bitstr(x, n): 
+  if x < 0: 
+    return "x" * n
   return  ("0" * n + "{0:b}".format(x))[-n:]
 
 def gen_next(x, header): 
